@@ -3,8 +3,8 @@ import { AppContext } from "../context";
 
 const Users = ({user}) => {
     const {dispatchUsersEvent}=useContext(AppContext);
-    const handleRemoveUser =()=> {
-        dispatchUsersEvent('REMOVE-USER', {userId:user.id} )
+    const handleRemoveUser = ()=> {
+        dispatchUsersEvent('REMOVE_USER', {userId:user.id} )
     }
     
     return ( 

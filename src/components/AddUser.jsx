@@ -7,9 +7,9 @@ const AddUser = () => {
     const [bio,setBio]=useState('')
 
     const {dispatchUsersEvent}=useContext(AppContext);
-    const handleAddUser =()=>{
-        const user ={id:Math.random(),name,age,bio}
-        dispatchUsersEvent('ADD-USER',{newUser:user})
+    const handleAddUser = () => {
+        const user = {id:Math.random(),name,age,bio}
+        dispatchUsersEvent('ADD_USER',{newUser:user})
     }
     return ( 
         <div>
@@ -20,7 +20,7 @@ const AddUser = () => {
             <br />
             <textarea value={bio} onChange={(e)=>setBio(e.target.value)} placeholder="bio"></textarea>
             <br />
-            <button onClick={handleAddUser }>Add user</button>
+            <button onClick={handleAddUser}>Add user</button>
         </div>
      );
 }

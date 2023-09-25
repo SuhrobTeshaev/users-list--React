@@ -16,11 +16,11 @@ function App() {
   const [users,setUsers]= useState(usersList);
   const dispatchUsersEvent = (actionType,payload)=>{
     switch(actionType){
-      case  'ADD-USER':
+      case  'ADD_USER':
         setUsers([...users,payload.newUser])
         return;
         case 'REMOVE_USER':
-          setUsers(users.filter(user=>user.id===payload.userId))
+          setUsers(users.filter(user=>user.id!==payload.userId))
           return;
           default:
             return;
