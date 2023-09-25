@@ -20,7 +20,7 @@ function App() {
         setUsers([...users,payload.newUser])
         return;
         case 'REMOVE_USER':
-          setUsers(users.filter(users=>users.id===payload.userId))
+          setUsers(users.filter(user=>user.id===payload.userId))
           return;
           default:
             return;

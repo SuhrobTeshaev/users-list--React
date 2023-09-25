@@ -8,8 +8,8 @@ const AddUser = () => {
 
     const {dispatchUsersEvent}=useContext(AppContext);
     const handleAddUser =()=>{
-        const users ={id:Math.random(),name,age,bio}
-        dispatchUsersEvent('ADD-USER',{newUser:users})
+        const user ={id:Math.random(),name,age,bio}
+        dispatchUsersEvent('ADD-USER',{newUser:user})
     }
     return ( 
         <div>
