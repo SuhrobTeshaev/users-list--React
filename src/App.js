@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={{users,dispatchUsersEvent}}>
-        <AddUser/>
+        <AddUser />
         <UsersList/>
       </AppContext.Provider>
     </div>

@@ -1,3 +1,13 @@
 body {
   background-color: rgb(95, 94, 92);
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid blue;
+  width: 500px;
+  align-items: center;
+  margin: auto;
+  background-color:cadetblue;
+}
