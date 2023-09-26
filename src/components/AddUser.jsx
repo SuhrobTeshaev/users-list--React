@@ -11,6 +11,8 @@ const AddUser = () => {
         const user = {id:Math.random(),name,age,bio}
         dispatchUsersEvent('ADD_USER',{newUser:user})
     }
+    
+    }
     return ( 
         <div>
             <h3>Add new user</h3>
