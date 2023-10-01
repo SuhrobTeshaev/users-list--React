@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../context";
 import Users from "./Users";
+import Loading from "./Loading";
 
 const UsersList = () => {
     const {users}=useContext(AppContext)

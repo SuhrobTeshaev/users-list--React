@@ -3,6 +3,7 @@ import UsersList from './components/UsersList';
 import { useState } from 'react';
 import AddUser from './components/AddUser';
 import './App.css';
+import Loading from './components/Loading';
 
 const usersList = [
   {
@@ -30,6 +31,7 @@ function App() {
     <div className="App">
       <AppContext.Provider value={{users,dispatchUsersEvent}}>
         <AddUser />
+       
         <UsersList/>
       </AppContext.Provider>
     </div>

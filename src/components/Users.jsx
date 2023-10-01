@@ -4,7 +4,7 @@ import { AppContext } from "../context";
 const Users = ({user}) => {
     const {dispatchUsersEvent}=useContext(AppContext);
     const handleRemoveUser = ()=> {
-        dispatchUsersEvent('REMOVE_ USER', {userId:user.id} )
+        dispatchUsersEvent('REMOVE_USER', {userId:user.id} )
     }
     
     return ( 

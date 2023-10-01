@@ -1,18 +1,23 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context";
+import Loading from "./Loading";
 
 const AddUser = () => {
     const [name,setName]=useState('')
     const [age,setAge]=useState('')
     const [bio,setBio]=useState('')
-
+    // useEffect(()=>{
+    //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+    //   .then(response => response.json())
+    //   .then(json => console.log(json))
+    // })
     const {dispatchUsersEvent}=useContext(AppContext);
     const handleAddUser = () => {
         const user = {id:Math.random(),name,age,bio}
         dispatchUsersEvent('ADD_USER',{newUser:user})
     }
     
-    }
+    
     return ( 
         <div>
             <h3>Add new user</h3>
@@ -22,7 +27,7 @@ const AddUser = () => {
             <br />
             <textarea value={bio} onChange={(e)=>setBio(e.target.value)} placeholder="bio"></textarea>
             <br />
-            <button onClick={handleAddUser}>Add user</button>
+            <button onClick={handleAddUser?handleAddUser:<Loading/>}>Add user</button>
         </div>
      );
 }
